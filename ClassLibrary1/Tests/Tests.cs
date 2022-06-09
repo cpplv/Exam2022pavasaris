@@ -22,6 +22,7 @@ namespace ClassLibrary1.Tests
         {           
             IWebElement search = this._driver.FindElement(By.Id("gh-ac"));
             Assert.IsTrue(search.Displayed);
+            _driver.Quit();
         }
 
         [Test]
@@ -29,6 +30,7 @@ namespace ClassLibrary1.Tests
         {
             IWebElement button = this._driver.FindElement(By.Id("gh-btn"));
             Assert.IsTrue(button.Displayed);
+            _driver.Quit();
         }
     }
 }
