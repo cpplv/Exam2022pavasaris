@@ -1,4 +1,4 @@
-using System.Security.Principal;
+﻿using System.Security.Principal;
 using System.Xml.Linq;
 
 namespace TestProject1
@@ -13,7 +13,7 @@ namespace TestProject1
         [Test]
         public void Test1_field()
         {
-            //ne l?dz galam saprotu par testiem
+            //ne līdz galam saprotu par testiem
             try
             {
                 driver.FindElement(By.Id("gh-ac"));
@@ -29,7 +29,7 @@ namespace TestProject1
         [Test]
         public void Test2_search()
         {
-            //ne l?dz galam saprotu par testiem
+            //ne līdz galam saprotu par testiem
             try
             {
                 driver.FindElement(By.Id("gh-btn"));
