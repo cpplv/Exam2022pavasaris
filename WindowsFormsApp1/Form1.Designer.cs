@@ -46,6 +46,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(315, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "search";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -74,6 +76,7 @@
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "link to search result";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
             // 
@@ -81,6 +84,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(544, 20);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -90,6 +94,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -99,6 +104,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Close browser";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -108,6 +114,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // richTextBox1
             // 
@@ -116,6 +123,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(544, 211);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // label4
             // 
@@ -125,6 +133,7 @@
             this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Search history";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form1
             // 
