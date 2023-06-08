@@ -66,7 +66,6 @@
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "search";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -76,7 +75,6 @@
             this.label3.Size = new System.Drawing.Size(98, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "link to search result";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox2
             // 
@@ -133,7 +131,6 @@
             this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Search history";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Form1
             // 

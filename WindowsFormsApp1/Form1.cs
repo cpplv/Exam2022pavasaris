@@ -13,9 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        private Stack<string> searchHistory = new Stack<string>(); // Store search history
-        private Process browserProcess; // Store browser process information
-
+        private Stack<string> searchHistory = new Stack<string>(); 
+        private Process browserProcess; 
         public Form1()
         {
             InitializeComponent();
@@ -23,25 +22,23 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string searchQuery = textBox1.Text; // Get text from search field
+            string searchQuery = textBox1.Text;
 
-            // Create URL including search query
             string url = "https://www.ebay.com/sch/" + Uri.EscapeDataString(searchQuery);
 
             try
             {
-                Process.Start(url); // Launch browser with search result URL
+                Process.Start(url); 
             }
             catch (Win32Exception ex)
             {
                 MessageBox.Show("Error launching browser: " + ex.Message);
             }
 
-            // Add link to search result in the "link to search" field
             textBox2.Text = url;
 
-            // Add link to search history in the "search history" field
-            richTextBox1.Text += url + "";
+      
+            richTextBox1.Text += url + "\n";
 
             searchHistory.Push(searchQuery);
         }
@@ -50,11 +47,11 @@ namespace WindowsFormsApp1
         {
             if (searchHistory.Count > 0)
             {
-                searchHistory.Pop(); // Remove the last search query from history
+                searchHistory.Pop(); 
 
-                // Update search history field with the remaining history
-                richTextBox1.Text = string.Join("<br>", searchHistory.Select(query => "<a href='https://www.ebay.com/search?q=" + Uri.EscapeDataString(query) + "'>" + query + "</a>"));
-                richTextBox1.Refresh();
+             
+                richTextBox1.Text = string.Join("<br>", searchHistory.Select(query => "https://www.ebay.com/search?q=" + query));
+
             }
         }
 
@@ -70,17 +67,7 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-        }
         private void label1_Click(object sender, EventArgs e)
-        {
-        }
-        private void label4_Click(object sender, EventArgs e)
         {
         }
 
@@ -90,11 +77,11 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-                    browserProcess.CloseMainWindow(); // Attempt to close the browser window
+                    browserProcess.CloseMainWindow();
 
                     if (!browserProcess.HasExited)
                     {
-                        browserProcess.Close(); // Close the browser process
+                        browserProcess.Close();
                     }
                 }
                 catch (Exception ex)
@@ -103,7 +90,7 @@ namespace WindowsFormsApp1
                 }
             }
 
-            // Close the current form (application)
+      
             Application.Exit();
         }
     }
